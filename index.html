@@ -1,0 +1,133 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shx - Cadastro e Listagem de Pacientes</title>
+      <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  
+  <body>
+        
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+            <a class="navbar-brand" href="#"><img src="img/shx-official.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+        
+            </div>
+          </nav>
+
+
+        <div class="container">
+            <h1 align="center">Consulta de pacientes</h1><br>       
+            
+            <table id="pacienteTabela" class="table table-bordered table-striped">
+              <thead>
+                  <td><strong>Nome</strong></td>
+                  <td><strong>CPF</strong></td> 
+                  <td><strong>Data de Nascimento</strong></td>
+                  <td><strong>Celular</strong></td>
+                  <td><strong>Ação</strong></td>
+                </thead>
+                <tbody id="pacientes"> 
+                </tbody>
+              </table>
+           
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#formularioModal">Adicionar &raquo;</button>
+
+            
+
+          </div>
+
+       
+        
+        <!-- Modal -->
+        <div class="modal fade" id="formularioModal" tabindex="-1" role="dialog" aria-labelledby="cadastrarModal" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Cadastrar Paciente</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                  <form id="adicionarPaciente">
+                    <div class="form-group">
+                      <label for="nome">Nome</label>
+                      <input type="text" class="form-control" id="nome" placeholder="Nome">
+                    </div>
+                    <div class="form-group">
+                      <label for="dataNascimento">Data de Nascimento</label>
+                      <input type="text" class="form-control date" id="dataNascimento" placeholder="Data de Nascimento">
+                    </div>
+                    <div class="form-group">
+                      <label for="cpf">CPF</label>
+                      <input type="text" class="form-control cpf" id="cpf" placeholder="CPF">
+                    </div>
+                    <div class="form-group">
+                      <label for="celular">Celular</label>
+                      <input type="text" class="form-control phone" placeholder="Celular">
+                    </div>
+                  </form>
+               </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="submit" id="cadastrarPaciente" class="btn btn-primary">Cadastrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="modal fade" id="editarModal" tabindex="-1" role="dialog" aria-labelledby="editarModal" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Editar Paciente</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                  <form id="editarPaciente">
+                    <div class="form-group">
+                      <label for="nome">Nome</label>
+                      <input type="text" class="form-control" id="nome" placeholder="Nome">
+                    </div>
+                    <div class="form-group">
+                      <label for="dataNascimento">Data de Nascimento</label>
+                      <input type="text" class="form-control date" id="dataNascimento" placeholder="Data de Nascimento">
+                    </div>
+                    <div class="form-group">
+                      <label for="cpf">CPF</label>
+                      <input type="text" class="form-control cpf" id="cpf" placeholder="CPF">
+                    </div>
+                    <div class="form-group">
+                      <label for="celular">Celular</label>
+                      <input type="text" class="form-control phone" placeholder="Celular">
+                    </div>
+                  </form>
+               </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="submit" id="editarPaciente" class="btn btn-primary">Editar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <script src="node_modules/jquery/dist/jquery.min.js"></script>
+          <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+          <script src="js/main.js"></script>
+          <script src="js/jquery.mask.js"></script>
+          
+</body>
+

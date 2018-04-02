@@ -1,0 +1,18 @@
+{
+    "lockfileVersion": 1,
+    "name": "shx-teste",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Pedro Faria",
+    "license": "ISC",
+    "description": "",
+    "dependencies": {
+      "bootstrap": "^4.0.0",
+      "jquery": "^3.3.1",
+      "moment": "^2.22.0"
+    }
+  }
+  
