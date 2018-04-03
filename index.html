@@ -36,12 +36,8 @@
                 </tbody>
               </table>
            
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#formularioModal">Adicionar &raquo;</button>
-
-            
-
-          </div>
-
+            <button type="button" class="btn btn-primary" id="showModalCadastrar" data-toggle="modal" data-target="#formularioModal">Adicionar &raquo;</button>         
+         </div>
        
         
         <!-- Modal -->
@@ -49,7 +45,8 @@
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Cadastrar Paciente</h5>
+                <h5 class="modal-title" id="labelCadastro">Cadastrar Paciente</h5>
+                <h5 class="modal-title" id="labelEdicao">Editar Paciente</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -59,75 +56,39 @@
                   <form id="adicionarPaciente">
                     <div class="form-group">
                       <label for="nome">Nome</label>
-                      <input type="text" class="form-control" id="nome" placeholder="Nome">
+                      <input type="text" class="form-control" id="nome" required="required" placeholder="Nome">
                     </div>
                     <div class="form-group">
                       <label for="dataNascimento">Data de Nascimento</label>
-                      <input type="text" class="form-control date" id="dataNascimento" placeholder="Data de Nascimento">
+                      <input type="text" class="form-control date" id="dataNascimento" required="required" placeholder="Data de Nascimento">
                     </div>
                     <div class="form-group">
                       <label for="cpf">CPF</label>
-                      <input type="text" class="form-control cpf" id="cpf" placeholder="CPF">
+                      <input type="text" class="form-control cpf" id="cpf" required="required" placeholder="CPF">
                     </div>
                     <div class="form-group">
                       <label for="celular">Celular</label>
-                      <input type="text" class="form-control phone" placeholder="Celular">
+                      <input type="text" class="form-control phone" id="celular" required="required" placeholder="Celular">
                     </div>
                   </form>
                </div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" id="cancelar">Cancelar</button>
                 <button type="submit" id="cadastrarPaciente" class="btn btn-primary">Cadastrar</button>
+                <button type="submit" id="editarPaciente" class="btn btn-primary">Salvar edição</button>
               </div>
             </div>
           </div>
         </div>
 
 
-        <div class="modal fade" id="editarModal" tabindex="-1" role="dialog" aria-labelledby="editarModal" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Editar Paciente</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <div class="container">
-                  <form id="editarPaciente">
-                    <div class="form-group">
-                      <label for="nome">Nome</label>
-                      <input type="text" class="form-control" id="nome" placeholder="Nome">
-                    </div>
-                    <div class="form-group">
-                      <label for="dataNascimento">Data de Nascimento</label>
-                      <input type="text" class="form-control date" id="dataNascimento" placeholder="Data de Nascimento">
-                    </div>
-                    <div class="form-group">
-                      <label for="cpf">CPF</label>
-                      <input type="text" class="form-control cpf" id="cpf" placeholder="CPF">
-                    </div>
-                    <div class="form-group">
-                      <label for="celular">Celular</label>
-                      <input type="text" class="form-control phone" placeholder="Celular">
-                    </div>
-                  </form>
-               </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                <button type="submit" id="editarPaciente" class="btn btn-primary">Editar</button>
-              </div>
-            </div>
-          </div>
-        </div>
 
           <script src="node_modules/jquery/dist/jquery.min.js"></script>
           <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
           <script src="js/main.js"></script>
           <script src="js/jquery.mask.js"></script>
+          <script src="js/teste.js"></script>
           
 </body>
 
