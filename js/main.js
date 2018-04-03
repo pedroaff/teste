@@ -107,10 +107,6 @@ $(document).ready(function () {
         });
     }
 
-    var habilitarBotao = function (){
-        $("#cadastrarPaciente").prop("disabled", "true");
-    }
-
     var mostrarDadosEdicao = function (dados) {
         $nome.val(dados.nome);
         $dataNascimento.val(dados.dataNascimento);
@@ -160,7 +156,15 @@ $(document).ready(function () {
                     carregar();
                     $('#formularioModal').modal('hide');
                     $('form input:text').val('');               
+                },
+                error: function(jqXHR) {
+                    alert('Erro ao adicionar dados.');
+    
+                    console.log('jqXHR:');
+                    console.log(jqXHR);
+
                 }
+    
             });
         
 
